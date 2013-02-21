@@ -1,0 +1,24 @@
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+	ui = auto
+[user]
+	name = Gilberto Alvarado
+	email = gil@hackergil.com
+[apply]
+  whitespace = nowarn
+[merge]
+  summary = true
+[alias]
+  co = commit
+  coa = commit -a
+  diff = diff HEAD^ --word-diff
+  st = status
+  unstage = reset HEAD
+  uncommit = reset --soft HEAD^
+  stl = stash list
+  stp = stash pop
+[core]
+	editor = /usr/bin/vim
