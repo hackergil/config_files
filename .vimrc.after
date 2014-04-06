@@ -1,0 +1,8 @@
+set textwidth=100
+set tabstop=2                " Number of visual spaces per tab
+set smartindent              " automatically inserts one extra level of indentation in some cases
+set softtabstop=2           " Number of spaces in tab when editing
+set expandtab                " Insert spaces when tab is pressed
+set shiftwidth=2             " Controls the number of columns text is indented with >>
+
+

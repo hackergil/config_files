@@ -1,0 +1,27 @@
+syntax enable
+
+let &t_Co=256                " 256 colors
+let mapleader = ","          " Remap leader key to ,
+
+set showmatch                " Highlight matching [{()}]
+
+set incsearch                " Search as characters are entered
+set hlsearch                 " Highlight matches
+
+filetype indent on           " load filetype-specific indent files
+
+" Control+b goes to the previous buffer (back)
+nmap <C-B> :b#<cr>
+
+" Control+S saves
+nmap <C-S> :w<cr>
+
+" Copy to clipboard
+nmap <C-C> :w !pbcopy<cr>
+
+" Remove highlighted search results
+nnoremap <leader><space> :nohlsearch<CR>
+
+" kj is escape now
+inoremap kj <esc>
+
