@@ -1,26 +1,37 @@
 syntax enable
 
-let &t_Co=256                " 256 colors
-let mapleader = ","          " Remap leader key to ,
+let &t_Co=256                " Use 256 color layout
+let mapleader = ","
+let maplocalleader = "\\"
 
 set showmatch                " Highlight matching [{()}]
-
 set incsearch                " Search as characters are entered
 set hlsearch                 " Highlight matches
 
 filetype indent on           " load filetype-specific indent files
 
+" Delete the entire line with -
+nnoremap - dd
+
+" Word to uppercase
+nnoremap <c-u> <esc>veU
+
+" Word to lowercase
+nnoremap <c-l> <esc>veu
+
 " Control+b goes to the previous buffer (back)
-nmap <C-B> :b#<cr>
+nnoremap <C-B> :b#<cr>
 
 " Control+S saves
-nmap <C-S> :w<cr>
+nnoremap <C-S> :w<cr>
 
 " Copy to clipboard
-nmap <C-C> :w !pbcopy<cr>
+nnoremap <C-C> :w !pbcopy<cr>
 
 " Remove highlighted search results
 nnoremap <leader><space> :nohlsearch<CR>
+
+inoremap <c-d> <esc>ddi
 
 " kj is escape now
 inoremap kj <esc>
