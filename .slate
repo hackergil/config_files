@@ -1,0 +1,51 @@
+# Monitor Aliases
+alias mon-laptop     0
+alias mon-external1   1
+alias mon-external2   2
+
+# Aliases to move to monitor
+alias 0-half        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-laptop}
+alias 0-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-laptop}
+alias 1-half        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-external1}
+alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-external1}
+alias 2-half        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-external2}
+alias 2-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-external2}
+
+# Bindings to move screens to a monitor
+bind 0:ctrl;alt   ${0-half}
+bind 1:ctrl;alt   ${0-full}
+bind 2:ctrl;alt   ${1-half}
+bind 3:ctrl;alt   ${1-full}
+bind 4:ctrl;alt   ${2-half}
+bind 5:ctrl;alt   ${2-full}
+
+bind g:cmd grid padding:5 0:2,1 1:2,1 2:2,1
+
+# Application bindings
+
+bind b:ctrl;alt focus 'Google Chrome'
+bind c:ctrl;alt focus 'Franz'
+bind e:ctrl;alt focus 'Evernote'
+bind f:ctrl;alt focus 'Firefox'
+bind i:ctrl;alt focus 'iTerm2'
+bind j:ctrl;alt focus 'IntelliJ IDEA'
+bind m:ctrl;alt focus 'Mail'
+bind o:ctrl;alt focus 'Microsoft Outlook'
+bind p:ctrl;alt focus 'Preview'
+bind s:ctrl;alt focus 'Slack'
+bind t:ctrl;alt focus 'Sourcetree'
+bind v:ctrl;alt focus 'Code'
+
+# Resize windows
+bind right:ctrl;alt resize +50 +0
+bind left:ctrl;alt resize -50 +0
+bind up:ctrl;alt resize +0 -50
+bind down:ctrl;alt resize +0 +50
+
+# Move (nudge) windows
+bind right:ctrl;cmd nudge +50 +0
+bind left:ctrl;cmd nudge -50 +0
+bind up:ctrl;cmd nudge +0 -50
+bind down:ctrl;cmd nudge +0 +50
+
+bind pad1:ctrl move 0;0 100;100 1
